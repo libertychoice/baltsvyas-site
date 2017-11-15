@@ -1,0 +1,3 @@
+ls -l | grep f17 > ./ttt
+
+cp f17d09ad875aab6a2566680dea71c56a-700x300.jpg f17d09ad875aab6a2566680dea71c56a.jpg

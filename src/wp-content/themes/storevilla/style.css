@@ -835,7 +835,7 @@ object {
 
 article .entry-content ul {
 	margin:0;
-	padding: 0 0 0 20px;
+	padding: 0 0 0 100px;
 }
 article .entry-content ul li {
 	list-style: disc;
@@ -857,7 +857,7 @@ a {
 	text-decoration:none;
 }
 p {
-    margin: 0 0 10px; 
+    margin: 0 100px 10px; 
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 0 0 15px;
@@ -1102,7 +1102,7 @@ end
     margin-left: 10px;
 }
 .header-wrap .site-branding .site-title {
-    margin-bottom: 5px;
+    margin-bottom: 40px;
 }
 .header-wrap .site-branding .site-title a {
     font-size: 36px;
