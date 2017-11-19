@@ -485,6 +485,7 @@ jQuery( function( $ ) {
 							}
 
 							// Add new errors
+							console.log("AAAAAA");
 							if ( result.messages ) {
 								wc_checkout_form.submit_error( result.messages );
 							} else {

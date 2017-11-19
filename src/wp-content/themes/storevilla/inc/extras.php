@@ -204,15 +204,18 @@ if(!function_exists ('storevilla_product_search')){
 				'hide_empty' => true
 			);
 			$product_categories = get_terms( 'product_cat', $args ); 
-			$categories_show = '<option value="">'.__('All Categories','storevilla').'</option>';
-			$check = '';
+			//$categories_show = '<option value="">'.__('All Categories','storevilla').'</option>';
+            $categories_show = '<option value="">'.__('Все категории','storevilla').'</option>';
+
+            $check = '';
 			if(is_search()){
 				if(isset($_GET['term']) && $_GET['term']!=''){
 					$check = $_GET['term'];	
 				}
 			}
 			$checked = '';
-			$allcat = __('All Categories','storevilla');
+			//$allcat = __('All Categories','storevilla');
+            $allcat = __('Все категории','storevilla');
 			$categories_show .= '<optgroup class="sv-advance-search" label="'.esc_attr( $allcat ).'">';
 			foreach($product_categories as $category){
 				if(isset($category->slug)){
@@ -633,7 +636,7 @@ function storevilla_woocommerce_template_loop_product_thumbnail(){ ?>
     <div class="item-img">          
         
         <?php global $post, $product; if ( $product->is_on_sale() ) : 
-            echo apply_filters( 'woocommerce_sale_flash', '<div class="new-label new-top-right">' . __( 'Sale!', 'storevilla' ) . '</div>', $post, $product ); ?>
+//            echo apply_filters( 'woocommerce_sale_flash', '<div class="new-label new-top-right">' . __( 'Sale!', 'storevilla' ) . '</div>', $post, $product ); ?>
         <?php endif; ?>
         <?php
             global $product_label_custom;
@@ -641,9 +644,9 @@ function storevilla_woocommerce_template_loop_product_thumbnail(){ ?>
                 echo '<div class="new-label new-top-left">'.$product_label_custom.'</div>';
             }
         ?>
-        <a class="product-image" title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-            <?php echo woocommerce_get_product_thumbnail(); ?>
-        </a>           
+<!--        <a class="product-image" title="--><?php //the_title(); ?><!--" href="--><?php //the_permalink(); ?><!--">-->
+<!--            --><?php //echo woocommerce_get_product_thumbnail(); ?>
+<!--        </a>           -->
     </div>
 <?php 
 }
@@ -681,28 +684,46 @@ remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_l
 remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 function storevilla_woocommerce_template_loop_add_to_cart(){
 ?>
-    <div class="product-button-wrap clearfix align-1">
+    <div class="product-button-wrap clearfix">
         <?php woocommerce_template_loop_add_to_cart(); ?>
         
-            <a class="villa-details" title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-                <?php _e('View Details','storevilla'); ?>
-            </a>
+<!--            <a class="villa-details" title="--><?php //the_title(); ?><!--" href="--><?php //the_permalink(); ?><!--">-->
+<!--                --><?php //_e('View Details','storevilla'); ?>
+<!--            </a>-->
         
     </div>
 <?php
 }
-add_action( 'woocommerce_after_shop_loop_item_title' ,'storevilla_woocommerce_template_loop_add_to_cart', 11 );
+add_action( 'woocommerce_after_shop_loop_item_title' ,'storevilla_woocommerce_template_loop_add_to_cart', 12 );
 
 
 remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
 function storevilla_woocommerce_template_loop_price(){
 ?>
-    <div class="product-price-wrap">
+    <div class="product-price-wrap  align-1">
         <?php woocommerce_template_loop_price(); ?>        
     </div>
 <?php
 }
-add_action( 'woocommerce_after_shop_loop_item_title' ,'storevilla_woocommerce_template_loop_price', 12 );
+add_action( 'woocommerce_after_shop_loop_item_title' ,'storevilla_woocommerce_template_loop_price', 11 );
+
+
+
+
+//remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price1', 11 );
+function storevilla_woocommerce_template_loop_price1(){
+    ?>
+    <div class="product-price-wrap price2">
+        <?php woocommerce_template_loop_price1(); ?>
+    </div>
+    <?php
+}
+//add_action( 'woocommerce_after_shop_loop_item_title' ,'storevilla_woocommerce_template_loop_price1', 12 );
+
+
+
+
+
 
 function storevilla_woocommerce_template_loop_quick_info(){
 ?>

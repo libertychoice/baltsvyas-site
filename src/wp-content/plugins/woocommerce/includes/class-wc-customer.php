@@ -557,7 +557,8 @@ class WC_Customer extends WC_Legacy_Customer {
 	 * @return string
 	 */
 	public function get_billing_email( $context = 'view' ) {
-		return $this->get_address_prop( 'email', 'billing', $context );
+		//return $this->get_address_prop( 'email', 'billing', $context );
+        return $this->get_address_prop( 'email', 'billing', $context );
 	}
 
 	/**

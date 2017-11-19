@@ -373,9 +373,9 @@ if ( ! function_exists( 'storevilla_primary_navigation' ) ) {
 		</nav>
 <nav id="site-navigation" class="main-navigation">
 			<div class="store-container clearfix second-menu">
-				<div class="menu-toggle" aria-controls="primary-navigation">
-					<span></span>
-				</div>
+<!--				<div class="menu-toggle" aria-controls="primary-navigation">-->
+<!--					<span></span>-->
+<!--				</div>-->
 				<?php
 					wp_nav_menu(
 						array(

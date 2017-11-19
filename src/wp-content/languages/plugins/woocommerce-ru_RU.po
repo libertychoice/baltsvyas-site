@@ -15481,7 +15481,7 @@ msgstr "Контролирует, будет ли товар отмечен ка
 #: includes/admin/views/html-quick-edit-product.php:35
 #: includes/export/class-wc-product-csv-exporter.php:104
 msgid "Regular price"
-msgstr "Базовая цена"
+msgstr "Цена с НДС"
 
 #: includes/admin/importers/class-wc-product-csv-importer-controller.php:440
 #: includes/admin/importers/class-wc-product-csv-importer-controller.php:553
@@ -15489,7 +15489,7 @@ msgstr "Базовая цена"
 #: includes/admin/views/html-quick-edit-product.php:42
 #: includes/export/class-wc-product-csv-exporter.php:103
 msgid "Sale price"
-msgstr "Цена распродажи"
+msgstr "Цена без НДС"
 
 #: includes/admin/meta-boxes/views/html-variation-admin.php:133
 msgid "Sale start date"

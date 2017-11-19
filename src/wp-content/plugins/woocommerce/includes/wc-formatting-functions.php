@@ -499,7 +499,7 @@ function wc_price( $price, $args = array() ) {
 	}
 
 	$formatted_price = ( $negative ? '-' : '' ) . sprintf( $price_format, '<span class="woocommerce-Price-currencySymbol">' . get_woocommerce_currency_symbol( $currency ) . '</span>', $price );
-	$return          = '<span class="woocommerce-Price-amount amount">' . $formatted_price . '</span>';
+	$return          = '<span class="woocommerce-Price-amount amount amount1">' . $formatted_price . '</span>';
 
 	if ( $ex_tax_label && wc_tax_enabled() ) {
 		$return .= ' <small class="woocommerce-Price-taxLabel tax_label">' . WC()->countries->ex_tax_or_vat() . '</small>';
@@ -1075,8 +1075,11 @@ function wc_format_stock_quantity_for_display( $stock_quantity, $product ) {
  * @return string
  */
 function wc_format_sale_price( $regular_price, $sale_price ) {
-	$price = '<del>' . ( is_numeric( $regular_price ) ? wc_price( $regular_price ) : $regular_price ) . '</del> <ins>' . ( is_numeric( $sale_price ) ? wc_price( $sale_price ) : $sale_price ) . '</ins>';
-	return apply_filters( 'woocommerce_format_sale_price', $price, $regular_price, $sale_price );
+	//$price = '<del>' . ( is_numeric( $regular_price ) ? wc_price( $regular_price ) : $regular_price ) . '</del> <ins>' . ( is_numeric( $sale_price ) ? wc_price( $sale_price ) : $sale_price ) . '</ins>';
+    $price = '<div>' . ( is_numeric( $regular_price ) ? wc_price( $regular_price ) : $regular_price ) . '</div> <ins>' . ( is_numeric( $sale_price ) ? wc_price( $sale_price ) : $sale_price ) . '</ins>';
+
+
+    return apply_filters( 'woocommerce_format_sale_price', $price, $regular_price, $sale_price );
 }
 
 /**

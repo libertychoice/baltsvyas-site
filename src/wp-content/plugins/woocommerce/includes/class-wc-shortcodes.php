@@ -331,6 +331,7 @@ class WC_Shortcodes {
 		if ( wc_string_to_bool( $atts['show_price'] ) ) {
 			// @codingStandardsIgnoreStart
 			echo $product->get_price_html();
+          //  echo $product->get_price_html1();
 			// @codingStandardsIgnoreEnd
 		}
 

@@ -719,7 +719,7 @@ class WC_Checkout {
 			$available_gateways = WC()->payment_gateways->get_available_payment_gateways();
 
 			if ( ! isset( $available_gateways[ $data['payment_method'] ] ) ) {
-				$errors->add( 'payment', __( 'Invalid payment method.', 'woocommerce' ) );
+//				$errors->add( 'payment', __( 'Invalid payment method.', 'woocommerce' ) );
 			} else {
 				$available_gateways[ $data['payment_method'] ]->validate_fields();
 			}

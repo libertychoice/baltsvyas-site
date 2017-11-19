@@ -32,4 +32,5 @@ global $product; ?>
 		<?php echo wc_get_rating_html( $product->get_average_rating() ); ?>
 	<?php endif; ?>
 	<?php echo $product->get_price_html(); ?>
+<!--    --><?php //echo $product->get_price_html1(); ?>
 </li>

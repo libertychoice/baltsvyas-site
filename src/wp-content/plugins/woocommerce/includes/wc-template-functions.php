@@ -765,6 +765,23 @@ if ( ! function_exists( 'woocommerce_template_loop_price' ) ) {
 		wc_get_template( 'loop/price.php' );
 	}
 }
+
+
+
+//if ( ! function_exists( 'woocommerce_template_loop_price1' ) ) {
+//
+//    /**
+//     * Get the product price for the loop.
+//     *
+//     * @subpackage	Loop
+//     */
+//    function woocommerce_template_loop_price1() {
+//        wc_get_template( 'loop/price1.php' );
+//    }
+//}
+
+
+
 if ( ! function_exists( 'woocommerce_template_loop_rating' ) ) {
 
 	/**

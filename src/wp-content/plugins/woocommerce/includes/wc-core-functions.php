@@ -1180,7 +1180,9 @@ function wc_transaction_query( $type = 'start' ) {
  * @return string Url to cart page
  */
 function wc_get_cart_url() {
-	return apply_filters( 'woocommerce_get_cart_url', wc_get_page_permalink( 'cart' ) );
+	//return apply_filters( 'woocommerce_get_cart_url', wc_get_page_permalink( 'cart' ) );
+    //echo wc_get_page_permalink( 'cart' )."/?page_id=73 " ;
+    return apply_filters( 'woocommerce_get_cart_url', wc_get_page_permalink( 'cart' )."/?page_id=73 "  );
 }
 
 /**
@@ -1199,7 +1201,8 @@ function wc_get_checkout_url() {
 		}
 	}
 
-	return apply_filters( 'woocommerce_get_checkout_url', $checkout_url );
+	//return apply_filters( 'woocommerce_get_checkout_url', $checkout_url );
+    return apply_filters( 'woocommerce_get_checkout_url', $checkout_url."/?page_id=82"  );
 }
 
 /**

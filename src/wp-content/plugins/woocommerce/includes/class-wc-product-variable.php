@@ -156,6 +156,35 @@ class WC_Product_Variable extends WC_Product {
 		return apply_filters( 'woocommerce_get_price_html', $price, $this );
 	}
 
+
+
+//
+//    public function get_price_html1( $price = '' ) {
+//        $prices = $this->get_variation_prices( true );
+//
+//        if ( empty( $prices['price'] ) ) {
+//            $price = apply_filters( 'woocommerce_variable_empty_price_html', '', $this );
+//        } else {
+//            $min_price     = current( $prices['price'] );
+//            $max_price     = end( $prices['price'] );
+//            $min_reg_price = current( $prices['regular_price'] );
+//            $max_reg_price = end( $prices['regular_price'] );
+//
+//            if ( $min_price !== $max_price ) {
+//                $price = wc_format_price_range( $min_price, $max_price );
+//            } elseif ( $this->is_on_sale() && $min_reg_price === $max_reg_price ) {
+//                $price = wc_format_sale_price( wc_price( $max_reg_price ), wc_price( $min_price ) );
+//            } else {
+//                $price = wc_price( $min_price );
+//            }
+//
+//            $price = apply_filters( 'woocommerce_variable_price_html', $price . $this->get_price_suffix(), $this );
+//        }
+//
+//        return apply_filters( 'woocommerce_get_price_html1', $price, $this );
+//    }
+
+
 	/**
 	 * Get the suffix to display after prices > 0.
 	 *

@@ -59,14 +59,17 @@ class Text_Diff_Renderer_inline extends Text_Diff_Renderer {
      *
      * @var string
      */
-    var $_del_prefix = '<del>';
+//    var $_del_prefix = '<del>';
+    var $_del_prefix = '<div>';
+
 
     /**
      * Suffix for deleted text.
      *
      * @var string
      */
-    var $_del_suffix = '</del>';
+//    var $_del_suffix = '</del>';
+    var $_del_suffix = '</div>';
 
     /**
      * Header for each change block.

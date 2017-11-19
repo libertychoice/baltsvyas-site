@@ -421,7 +421,8 @@ class WC_Admin_Post_Types {
 				break;
 			case 'price' :
 				echo $the_product->get_price_html() ? $the_product->get_price_html() : '<span class="na">&ndash;</span>';
-				break;
+
+                break;
 			case 'product_cat' :
 			case 'product_tag' :
 				if ( ! $terms = get_the_terms( $post->ID, $column ) ) {

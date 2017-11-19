@@ -94,6 +94,10 @@ class WC_Embed {
 		return $excerpt;
 	}
 
+
+
+
+
 	/**
 	 * Create the button to go to the product page for embedded products.
 	 *

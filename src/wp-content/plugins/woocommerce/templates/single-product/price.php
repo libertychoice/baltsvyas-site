@@ -24,3 +24,4 @@ global $product;
 
 ?>
 <p class="price"><?php echo $product->get_price_html(); ?></p>
+<!--<p class="price1">--><?php //echo $product->get_price_html1(); ?><!--</p>-->

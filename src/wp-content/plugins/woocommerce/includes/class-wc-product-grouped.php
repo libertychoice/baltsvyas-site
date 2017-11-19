@@ -116,13 +116,86 @@ class WC_Product_Grouped extends WC_Product {
 		return apply_filters( 'woocommerce_get_price_html', $price, $this );
 	}
 
-	/*
-	|--------------------------------------------------------------------------
-	| Getters
-	|--------------------------------------------------------------------------
-	|
-	| Methods for getting data from the product object.
-	*/
+
+
+
+
+
+
+    /**
+     * Returns the price in html format.
+     *
+     * @access public
+     * @param string $price (default: '')
+     * @return string
+     */
+//    public function get_price_html1( $price = '' ) {
+//        $tax_display_mode = get_option( 'woocommerce_tax_display_shop' );
+//        $child_prices     = array();
+//        $children         = array_filter( array_map( 'wc_get_product', $this->get_children() ), 'wc_products_array_filter_visible_grouped' );
+//
+//        foreach ( $children as $child ) {
+//            if ( '' !== $child->get_price() ) {
+//                $child_prices[] = 'incl' === $tax_display_mode ? wc_get_price_including_tax( $child ) : wc_get_price_excluding_tax( $child );
+//            }
+//        }
+//
+//        if ( ! empty( $child_prices ) ) {
+//            $min_price = min( $child_prices );
+//            $max_price = max( $child_prices );
+//        } else {
+//            $min_price = '';
+//            $max_price = '';
+//        }
+//
+//        if ( '' !== $min_price ) {
+//            $price   = $min_price !== $max_price ? sprintf( _x( '%1$s&ndash;%2$s', 'Price range: from-to', 'woocommerce' ), wc_price( $min_price ), wc_price( $max_price ) ) : wc_price( $min_price );
+//            $is_free = ( 0 == $min_price && 0 == $max_price );
+//
+//            if ( $is_free ) {
+//                $price = apply_filters( 'woocommerce_grouped_free_price_html', __( 'Free!', 'woocommerce' ), $this );
+//            } else {
+//                $price = apply_filters( 'woocommerce_grouped_price_html', $price . $this->get_price_suffix(), $this, $child_prices );
+//            }
+//        } else {
+//            $price = apply_filters( 'woocommerce_grouped_empty_price_html', '', $this );
+//        }
+//
+//        return apply_filters( 'woocommerce_get_price_html1', $price, $this );
+//    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Getters
+    |--------------------------------------------------------------------------
+    |
+    | Methods for getting data from the product object.
+    */
 
 	/**
 	 * Return the children of this product.

@@ -19703,7 +19703,7 @@ msgstr ""
 
 #: includes/class-wc-post-types.php:87
 msgid "All categories"
-msgstr ""
+msgstr "Все категории"
 
 #: includes/class-wc-post-types.php:88
 msgid "Parent category"

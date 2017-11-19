@@ -318,7 +318,7 @@ msgstr ""
 
 #: inc/extras.php:212 inc/extras.php:220
 msgid "All Categories"
-msgstr ""
+msgstr "Все категории"
 
 #: inc/extras.php:237
 msgid "Search entire store here"

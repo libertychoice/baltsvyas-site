@@ -63,7 +63,7 @@ class WC_Widget_Cart extends WC_Widget {
 		}
 
 		// Insert cart widget placeholder - code in woocommerce.js will update this on page load
-		echo '<div class="widget_shopping_cart_content"></div>';
+//		echo '<div class="widget_shopping_cart_content"></div>';
 
 		if ( $hide_if_empty ) {
 			echo '</div>';

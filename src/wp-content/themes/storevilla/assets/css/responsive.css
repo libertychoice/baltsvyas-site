@@ -49,17 +49,20 @@
 @media (max-width: 1040px) {
 	.product-button-wrap {
 		text-align: center;
+
 	}
 	.product-button-wrap a.button, .product-button-wrap a.added_to_cart,
 	.product-button-wrap a.villa-details {
 		display: block;
-		float: none;
+		/*float: none;*/
 		margin: 0 auto;
 		width: 130px;
 	}
 	.product-button-wrap a.button, .product-button-wrap a.added_to_cart {
 		margin-bottom: 5px;
-		width: 130px;
+		margin-top: 5px;
+		padding-top: 5%;
+		width: 200px;
 	}
 	.product-button-wrap a.button::before, 
 	.product-button-wrap a.added_to_cart::before {
