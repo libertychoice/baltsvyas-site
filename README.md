@@ -14,3 +14,9 @@ For installing new version:
 2. Copy files in ./src directory to /var/www/html/
 
 3. Execute command: service apache2 restart
+
+
+TODO:
+1. Add sending to email (install sendmail)
+2. Remove account and logout button
+3. Add fast links to categories in top menu
